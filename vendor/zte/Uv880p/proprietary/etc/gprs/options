@@ -1,0 +1,15 @@
+-d
+-detach
+115200
+modem
+crtscts
+noccp
+mtu 1400
+mru 1400
+-chap
+#logfile /data/local/logs/ppp.log //canceled by doukailun 20110824
+usepeerdns
+noipdefault
+defaultroute
+0.0.0.0:0.0.0.0
+hide-password

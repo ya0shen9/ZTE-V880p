@@ -1,0 +1,14 @@
+#! /system/bin/sh
+
+exec chat -v -s						\
+	TIMEOUT		3				\
+	ABORT		'\nBUSY\r'			\
+	ABORT		'\nNO ANSWER\r'			\
+	ABORT		'\nRINGING\r\n\r\nRINGING\r'	\
+	''		\rAT				\
+	TIMEOUT		30				\
+	OK	ATS0=0	\
+	OK	ATE0V1	\
+	OK	AT+CGDCONT=1,\"IP\",\"CMWAP\"	\
+	OK	ATD*99***1#	\
+	
